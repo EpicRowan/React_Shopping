@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container">
     <div className="row">
-    <div className="col-6"> <FontAwesome className="fab fa-home" /> </div>
+    <div className="col-6"> Hellooo<FontAwesome className="fab fa-home" /> </div>
     </div>
     </div>
   );
