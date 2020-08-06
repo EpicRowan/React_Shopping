@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../logo.svg'
+import logo from '../logo.svg';
 import FontAwesome from 'react-fontawesome';
-
+import styled from 'styled-components'
 
 
 class Navbar extends Component {
@@ -21,14 +21,27 @@ class Navbar extends Component {
 					</li>
 				</ul>
 				<Link to='/cart' classname="ml-auto">
-					<button>
-						<FontAwesome className="fas fa-cart-plus" />
+					<ButtonContainer>
+						<span className="mr-2">
+							<FontAwesome className="fas fa-cart-plus" />
+						</span>
 						My cart
-					</button>
+
+					</ButtonContainer>
 				</Link>
 			</nav>
 			)
 	}
 } 
+
+
+const ButtonContainer = styled.button`
+	text-transform:capitalize;
+	font-size:1.4rem;
+	background:transparent;
+	border:0.05rem solid var(--lightBlue);
+	color:var(--lightBlue);
+	border-radius:0.5rem;
+`;
 
 export default Navbar
