@@ -21,7 +21,7 @@ class Navbar extends Component {
 
 					</li>
 				</ul>
-				<Link to='/cart' classname="ml-auto">
+				<Link to='/cart' className="ml-auto">
 					<ButtonContainer>
 						<span className="mr-2">
 							<FontAwesome className="fas fa-cart-plus" />
