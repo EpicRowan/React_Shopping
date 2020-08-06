@@ -21,7 +21,7 @@ export default class Product extends Component {
 					</Link>
 
 					<button 
-						className="cart-btn" 
+						className="card-btn" 
 						disabled={inCart ? true : false}
 						onClick={() => {
 							console.log("added");
@@ -57,8 +57,7 @@ const ProductWrapper = styled.div`
 .card {
 	border-color:transparent;
 	transition:all 1s linear;
-		height: 25rem;
-	width: 25rem;
+
 }
 
 .card-footer {
@@ -85,12 +84,28 @@ const ProductWrapper = styled.div`
 }
 .card-img-top {
 	transition:all 0.5s linear;
-	height: 10rem;
-	width: 10rem;
+
 
 }
 .img-container:hover .card-img-top {
 	transform:scale(1.2);
+}
+
+.card-btn {
+	position:absolute;
+	bottom:0;
+	right:0;
+	padding: 0.2rem 0.4rem;
+	background: var(--lightBlue);
+	border:none;
+	color:var(--mainWhite);
+	font-size:1.4rem;
+	border-radius:0.5rem 0 0 0;
+	transform:translate(100%, 100%);
+}
+
+.img-container:hover .card-btn {
+	transform:translate(0,0);
 }
 
 `;
