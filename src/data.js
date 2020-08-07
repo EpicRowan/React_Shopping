@@ -100,7 +100,7 @@ export const availableShrimp = [
 
 export const detailProduct = {
   id: 1,
-  title: "Google Pixel - Black",
+  title: "Red Cherry Shrimp",
   img: "img/bloody_mary.png",
   price: 10,
   company: "google",
