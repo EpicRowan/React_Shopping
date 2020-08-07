@@ -28,7 +28,7 @@ export default class ProductProvider extends Component {
 	handleDetail = () => {
 		console.log('hello rom detail');
 	};
-	addToCart = () => {
+	addToCart = (id) => {
 		console.log('hello from cart');
 	};
 
