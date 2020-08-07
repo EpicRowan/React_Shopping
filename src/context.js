@@ -8,15 +8,31 @@ const ProductContext = React.createContext();
 
 export default class ProductProvider extends Component {
 	state ={
-		products:availableShrimp,
+		products:[],
 		detailProduct:detailProduct
+	};
+	componentDidMount() {
+		this.setProducts();
+	}
+	setProducts = () => {
+		let tempProducts = [];
+		availableShrimp.forEach(item => {
+			const singleItem = {...item};
+			tempProducts = [...tempProducts, singleItem];
+
+		})
+		this.setState(() => {
+			return {products:tempProducts}
+		})
 	}
 	handleDetail = () => {
 		console.log('hello rom detail');
-	}
+	};
 	addToCart = () => {
-		console.lof('hello from cart');
-	}
+		console.log('hello from cart');
+	};
+
+
 	render() {
 		return (
 			<ProductContext.Provider value={{

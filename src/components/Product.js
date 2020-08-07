@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import  {ProductConsumer} from '../context';
 import FontAwesome from 'react-fontawesome';
+import PropTypes from 'prop-types';
 
 
 export default class Product extends Component {
@@ -52,6 +53,15 @@ export default class Product extends Component {
 
 } 
 
+Product.propTypes= {
+	product:PropTypes.shape({
+		id:PropTypes.number,
+		img:PropTypes.string,
+		title:PropTypes.string,
+		price:PropTypes.number,
+		inCart:PropTypes.bool
+	}).isRequired
+}
 
 const ProductWrapper = styled.div`
 .card {
@@ -84,7 +94,7 @@ const ProductWrapper = styled.div`
 }
 .card-img-top {
 	transition:all 0.5s linear;
-	height: 12rem;
+	height: 11rem;
 	width: 10rem;
 
 
