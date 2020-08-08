@@ -22,13 +22,21 @@ export default class ProductProvider extends Component {
 
 		});
 		this.setState(() => {
-			return {products:tempProducts};
+			return { products:tempProducts };
 		});
 	};
 
-	
+	getItem = (id) => {
+		const product = this.state.products.find(item => item.id === id);
+		return product;
+	};
+
+
 	handleDetail = () => {
-		console.log('hello rom detail');
+		const product = this.getItem();
+		this.setState(() => {
+			return {detailProduct:product}
+		});
 	};
 	addToCart = (id) => {
 		console.log('hello from cart');

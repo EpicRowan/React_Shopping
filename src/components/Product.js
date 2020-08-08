@@ -13,7 +13,12 @@ export default class Product extends Component {
 			<ProductWrapper className="col-sm-8 col-med-3 col-lg-3 my-3">
 
 				<div className="card">
-				<div className="img-container p-5" onClick={() => console.log("Click")
+				<ProductConsumer>
+				{(value) => (
+					<div 
+						className="img-container p-5" 
+						onClick={() => 
+							value.handleDetail(id)
 
 				}>
 					<Link to="/details">
@@ -25,7 +30,7 @@ export default class Product extends Component {
 						className="card-btn" 
 						disabled={inCart ? true : false}
 						onClick={() => {
-							console.log("added");
+							value.addToCart(id);
 					     }}
 				     >
 				     {inCart ? (
@@ -36,7 +41,11 @@ export default class Product extends Component {
 				     	) : (<FontAwesome className="fas fa-cart-plus" />
 				     	)}
 					</button>
-				</div>
+				</div>)}
+				
+				</ProductConsumer>
+
+			{/* Card Footer */}
 				<div className="card-footer d-flex justify-content-between">
 					<p className="align-self-center mb-0">
 					{title}
