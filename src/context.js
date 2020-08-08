@@ -20,11 +20,13 @@ export default class ProductProvider extends Component {
 			const singleItem = {...item};
 			tempProducts = [...tempProducts, singleItem];
 
-		})
+		});
 		this.setState(() => {
-			return {products:tempProducts}
-		})
-	}
+			return {products:tempProducts};
+		});
+	};
+
+	
 	handleDetail = () => {
 		console.log('hello rom detail');
 	};
