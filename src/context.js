@@ -32,8 +32,8 @@ export default class ProductProvider extends Component {
 	};
 
 
-	handleDetail = () => {
-		const product = this.getItem();
+	handleDetail = (id) => {
+		const product = this.getItem(id);
 		this.setState(() => {
 			return {detailProduct:product}
 		});
