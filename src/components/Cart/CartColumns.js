@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 
-export default class CartColumns extends Component {
-	render () {
+export default function CartColumns() {
 		return (
 			<div className="container-fluid text-center d-none d-lg-block ">
 				<div className="row">
@@ -35,4 +34,4 @@ export default class CartColumns extends Component {
 			</div>
 			)
 	}
-} 
+

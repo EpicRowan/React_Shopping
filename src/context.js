@@ -59,37 +59,38 @@ export default class ProductProvider extends Component {
 
 	increment = (id) => {
 		console.log('increment');
-	}
+	};
 
 	decrement = (id) => {
 		console.log('decrement');
-	}
+	};
 
 	removeItem= (id) => {
 		console.log('removed');
 
-	}
+	};
 
 	clearCart = () => {
 		console.log('cart cleared');
-	}
+	};
 
 	render() {
 		return (
-			<ProductContext.Provider value={{
+			<ProductContext.Provider 
+			  value={{
 				...this.state,
 				handleDetail:this.handleDetail,
 				addToCart:this.addToCart,
 				increment:this.increment,
 				decrement:this.decrement,
-				removeItem: this.removeItem,
-				clearCart: this.clearCart,
+				removeItem:this.removeItem,
+				clearCart:this.clearCart
 			}}
 			>
 				{this.props.children}
 			</ProductContext.Provider>
 
-			)
+			);
 	}
 }
 
