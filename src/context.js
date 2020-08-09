@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {availableShrimp, detailProduct} from './data';
 
 const ProductContext = React.createContext();
