@@ -10,7 +10,7 @@ export default class ProductProvider extends Component {
 	state ={
 		products:[],
 		detailProduct:detailProduct,
-		cart: [],
+		cart: availableShrimp,
 		cartSubTotal:0,
 		cartTax:0,
 		cartTotal:0,
