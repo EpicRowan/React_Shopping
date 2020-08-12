@@ -12,6 +12,9 @@ import Default from "./components/Default";
 class App extends Component {
   render() {
   return (
+    /*Fragment lets you group a list of children without adding extra nodes to the DOM.
+      Switch renders the first child that matches the location. */
+
     <React.Fragment> 
     <Navbar />
     <Switch>
