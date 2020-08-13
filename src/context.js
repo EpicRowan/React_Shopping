@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {availableShrimp, detailProduct} from './data';
 
+/* Context provides a way to pass data through the component tree without 
+having to pass props down manually at every level */
 const ProductContext = React.createContext();
-//Provider
-//Consumer
+
+//This is divided into two parts: Provider and Consumer
 
 
 export default class ProductProvider extends Component {
@@ -15,9 +17,13 @@ export default class ProductProvider extends Component {
 		cartTax:0,
 		cartTotal:0,
 	};
+
+	//This lifecycle method only runs once
 	componentDidMount() {
 		this.setProducts();
 	}
+
+	
 	setProducts = () => {
 		let tempProducts = [];
 		availableShrimp.forEach(item => {
@@ -30,6 +36,7 @@ export default class ProductProvider extends Component {
 		});
 	};
 
+    //Function to retrieve item by id
 	getItem = (id) => {
 		const product = this.state.products.find(item => item.id === id);
 		return product;
@@ -42,6 +49,7 @@ export default class ProductProvider extends Component {
 			return {detailProduct:product}
 		});
 	};
+
 	addToCart = (id) => {
 		let tempProducts = [...this.state.products];
 		const index = tempProducts.indexOf(this.getItem(id));
@@ -107,22 +115,22 @@ export default class ProductProvider extends Component {
 		let tempProducts = [...this.state.products];
 		let tempCart = [...this.state.cart];
 
-	tempCart = tempCart.filter(item => item.id !== id);
-	const index = tempProducts.indexOf(this.getItem(id));
-	let removedProduct = tempProducts[index];
-	removedProduct.inCart = false;
-	removedProduct.count = 0;
-	removedProduct.total = 0;
+		tempCart = tempCart.filter(item => item.id !== id);
+		const index = tempProducts.indexOf(this.getItem(id));
+		let removedProduct = tempProducts[index];
+		removedProduct.inCart = false;
+		removedProduct.count = 0;
+		removedProduct.total = 0;
 
-	this.setState(() => {
-		return {
-			cart: [...tempCart],
-			products:[...tempProducts]
-		};
-	}, 
-	() => {
-		this.addTotals();
-	});
+		this.setState(() => {
+			return {
+				cart: [...tempCart],
+				products:[...tempProducts]
+			};
+		}, 
+		() => {
+			this.addTotals();
+		});
 
 	};
 
