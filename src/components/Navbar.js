@@ -35,6 +35,8 @@ class Navbar extends Component {
 	}
 } 
 
+//Using styled-components
+
 const NavWrapper = styled.nav`
 	background:var(--mainBlue);
 	.nav-link {

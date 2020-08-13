@@ -3,10 +3,11 @@ import {ProductConsumer} from '../context';
 import {Link} from 'react-router-dom';
 import {ButtonContainer} from './Button';
 
-
 export default class Details extends Component {
 	render () {
 		return (
+			
+			//Using ProductContext.Consumer from context.js
 			<ProductConsumer>
 			{(value)=> {
 			const {id,company,img,info,price,title,inCart} = 

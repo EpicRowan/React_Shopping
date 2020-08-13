@@ -7,7 +7,8 @@ const ProductContext = React.createContext();
 
 //This is divided into two parts: Provider and Consumer
 
-
+//Provider will encapsule App and Route on index.js
+//ProductConsumer will cover Details.js
 export default class ProductProvider extends Component {
 	state ={
 		products:[],
@@ -23,10 +24,12 @@ export default class ProductProvider extends Component {
 		this.setProducts();
 	}
 
-	
+
 	setProducts = () => {
 		let tempProducts = [];
+		// The forEach() method executes a provided function once for each array element.
 		availableShrimp.forEach(item => {
+			// The spread syntax allows an expression to be expanded in places where multiple arguments are expected.
 			const singleItem = {...item};
 			tempProducts = [...tempProducts, singleItem];
 
@@ -173,11 +176,13 @@ export default class ProductProvider extends Component {
 				clearCart:this.clearCart
 			}}
 			>
+
 				{this.props.children}
 			</ProductContext.Provider>
 
 			);
 	}
+	
 }
 
 const ProductConsumer = ProductContext.Consumer;
