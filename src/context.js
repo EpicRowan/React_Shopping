@@ -73,6 +73,7 @@ export default class ProductProvider extends Component {
 
 	};
 
+	//previous way to increment: {useState}, const[count,setCount] = useState(0)
 	increment = (id) => {
 		let tempCart = [...this.state.cart];
 		const selectedProduct = tempCart.find(item=>item.id === id);

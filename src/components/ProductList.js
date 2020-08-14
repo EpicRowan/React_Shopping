@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import Title from './Title';
+
+//Allows access to the product functions in context.js
 import {ProductConsumer} from '../context';
 
 class ProductList extends Component {
@@ -14,7 +16,6 @@ class ProductList extends Component {
 						<Title name="our" title="shrimp" />
 							<div className="row">
 
-							//Allows access to the product functions in context.js
 							<ProductConsumer>
 								{value => {
 									return value.products.map(product => {
