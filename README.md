@@ -17,16 +17,16 @@ APIs: React context API
 ## <a name="features"></a>Features
 
 ### **Browse shrimp for sale**
-<img src="/static/img/shrimp_shopping.png" width="1000" height="200">
+<img src="/public/img/shrimp_shopping.png" width="1000" height="200">
 
 placeholder
-<img src="/static/img/shrimp_details.gif">
+<img src="/public/img/shrimp_details.gif">
 
 ### **View if item is in Cart**
 
  placeholder
 
-<img src="/static/img/shrimp_cart.gif" width="1000" height="500">
+<img src="/public/img/shrimp_cart.gif" width="1000" height="500">
 
 ### **Interactive Cart**
 
